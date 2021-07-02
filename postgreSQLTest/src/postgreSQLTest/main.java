@@ -1,26 +1,32 @@
 package postgreSQLTest;
 
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 public class main {
 
 
 		   public static void main(String args[]) {
-		      Connection c = null;
-		      try {
-		         Class.forName("org.postgresql.Driver");
-		         c = DriverManager
-		            .getConnection("jdbc:postgresql://localhost:5432/testdb",
-		            "postgres", null);
-		      } catch (Exception e) {
-		         e.printStackTrace();
-		         System.err.println(e.getClass().getName()+": "+e.getMessage());
-		         System.exit(0);
-		      }
-		      System.out.println("Opened database successfully");
-		   }
-		
-}
+		   
+		       try (Connection conn = DriverManager.getConnection(
+		                "jdbc:postgresql://127.0.0.1:5432/jonaeffm", "jonaeffm", "jonaeffm")) {
+
+		            if (conn != null) {
+		                System.out.println("Connected to the database!");
+		            } else {
+		                System.out.println("Failed to make connection!");
+		            }
+
+		        } catch (SQLException e) {
+		            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+		        } catch (Exception e) {
+		            e.printStackTrace();
+		        }
+			   
+		   }}
