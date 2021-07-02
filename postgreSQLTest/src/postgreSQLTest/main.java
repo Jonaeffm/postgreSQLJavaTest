@@ -22,6 +22,14 @@ public class main {
 		            } else {
 		                System.out.println("Failed to make connection!");
 		            }
+		            
+		            Statement stmt = conn.createStatement();    
+
+		            String CreateSql = "Create Table languages(id int primary key, german varchar, english varchar, norwegian varchar); ";
+
+		            stmt.executeUpdate(CreateSql);
+
+		              stmt.close();
 
 		        } catch (SQLException e) {
 		            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
