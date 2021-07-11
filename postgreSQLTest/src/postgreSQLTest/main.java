@@ -18,10 +18,11 @@ import java.io.IOException;
 
 public class main {
 
-		public void insert(String engl,String deu, String norsk)
+		public static String insert(int i,String engl,String deu, String norsk)
 		{
-			int i=0;
-			String InsertSQL  = "INSTERT INTO languages (primary key,geman,english,norwegian) VALUES ('"+Integer.toString(i)+"', '"+deu+"', '"+engl+"', '"+norsk+"')";
+			
+			String InsertSQL  = "INSERT INTO languages (id,german,english,norwegian) VALUES ('"+Integer.toString(i)+"', '"+deu+"', '"+engl+"', '"+norsk+"')";
+			return InsertSQL;
 		}
 	
 	
@@ -37,14 +38,16 @@ public class main {
 		            }
 		            
 		            Statement stmt = conn.createStatement();    
+		            
+		            String InsertSql = insert(0,"Optionen","options","innstillinger");
+		            
+		            stmt.executeUpdate(InsertSql);
 
-		            //String CreateSql = "Create Table languages(id int primary key, german varchar, english varchar, norwegian varchar); ";
+		            InsertSql = insert(1,"Start","start","start");
 		            
+		            stmt.executeUpdate(InsertSql);
 		            
-		            
-		            //stmt.executeUpdate(CreateSql);
-
-		              //stmt.close();
+		            stmt.close();
 
 		        } catch (SQLException e) {
 		            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
