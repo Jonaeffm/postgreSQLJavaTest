@@ -39,13 +39,42 @@ public class main {
 		            
 		            Statement stmt = conn.createStatement();    
 		            
-		            String InsertSql = insert(0,"Optionen","options","innstillinger");
+		            /*String InsertSql = insert(0,"Optionen","options","innstillinger");
 		            
 		            stmt.executeUpdate(InsertSql);
 
 		            InsertSql = insert(1,"Start","start","start");
 		            
+		            stmt.executeUpdate(InsertSql);*/
+		            
+		            String	InsertSql = insert(2,"beenden","exit","avslutt");
+		            
 		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(3,"Alarm aus","alarm off","alarm av");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(4,"Hauptmenü","mainmenu","hovedmeny");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(5,"Wahl","option","utvalg");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(6,"Wecker hinzufügen","add alarm clock","legg til vekkerklokke");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(7,"Wecker entfernen","remove alarm clock","fjern vekkerklokke");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(8,"Pfad und Dateiname der MP3","directory and filename of mp3","plassering og filnavn til MP3-filen");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
 		            
 		            stmt.close();
 
