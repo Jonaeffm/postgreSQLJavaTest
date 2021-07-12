@@ -90,7 +90,26 @@ public class main {
 		            InsertSql = insert(12,"morgen","tomorrow","i morgen");
 		            
 		            stmt.executeUpdate(InsertSql);
+		            	
+		            InsertSql = insert(13,"Stunden","hours","timer");
 		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(14,"Minuten","minutes","minutter");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(15,"Name","name","name");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(16,"Sprache","language","spraak");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(17,"Zeitzone","timezone","tidssone");
+		            
+		            stmt.executeUpdate(InsertSql);
 		            stmt.close();
 
 		        } catch (SQLException e) {
