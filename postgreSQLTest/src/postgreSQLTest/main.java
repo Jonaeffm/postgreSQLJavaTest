@@ -75,6 +75,21 @@ public class main {
 		            
 		            stmt.executeUpdate(InsertSql);
 		            
+		            InsertSql = insert(9,"Wecker anzeigen","show alarm clocks","vis vekkerklokke");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(10,"zurück","back","tilbake");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(11,"heute","today","i dag");
+		            
+		            stmt.executeUpdate(InsertSql);
+		            
+		            InsertSql = insert(12,"morgen","tomorrow","i morgen");
+		            
+		            stmt.executeUpdate(InsertSql);
 		            
 		            stmt.close();
 
