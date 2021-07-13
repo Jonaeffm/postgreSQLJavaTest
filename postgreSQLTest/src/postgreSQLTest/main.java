@@ -45,7 +45,7 @@ public class main {
 
 		            InsertSql = insert(1,"Start","start","start");
 		            
-		            stmt.executeUpdate(InsertSql);*/
+		            stmt.executeUpdate(InsertSql);
 		            
 		            String	InsertSql = insert(2,"beenden","exit","avslutt");
 		            
@@ -109,7 +109,28 @@ public class main {
 		            
 		            InsertSql = insert(17,"Zeitzone","timezone","tidssone");
 		            
-		            stmt.executeUpdate(InsertSql);
+		            stmt.executeUpdate(InsertSql);*/
+		            
+
+		            ResultSet rs = stmt.executeQuery( "select * from languages ;" );
+		            
+		            while ( rs.next() ) {
+
+		                int albumid = rs.getInt("id");
+
+		                String  german = rs.getString("german");
+		                
+		                String  english = rs.getString("english");
+
+		                String  norwegian = rs.getString("norwegian");
+
+		                System.out.printf( "Id = %s , german = %s, english = %s, norwegian= %s ", albumid,german, english,norwegian );
+
+		                System.out.println();
+
+		             }
+
+		             rs.close();
 		            stmt.close();
 
 		        } catch (SQLException e) {
