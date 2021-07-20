@@ -21,7 +21,7 @@ public class main {
 		public static String insert(int i,String engl,String deu, String norsk)
 		{
 			
-			String InsertSQL  = "INSERT INTO languages (id,german,english,norwegian) VALUES ('"+Integer.toString(i)+"', '"+deu+"', '"+engl+"', '"+norsk+"')";
+			String InsertSQL  = "INSERT INTO languages (id,e,g,n) VALUES ('"+Integer.toString(i)+"', '"+deu+"', '"+engl+"', '"+norsk+"')";
 			return InsertSQL;
 		}
 	
@@ -29,7 +29,7 @@ public class main {
 		   public static void main(String args[])  {
 		   
 		       try (Connection conn = DriverManager.getConnection(
-		                "jdbc:postgresql://127.0.0.1:5432/jonaeffm", "jonaeffm", "jonaeffm")) {
+		                "jdbc:postgresql://127.0.0.1:5432/jonaeffm", "jonaeffm", "jonaeffm")) { //<= HIER USER, PW UND DATENBANK
 
 		            if (conn != null) {
 		                System.out.println("Connected to the database!");
@@ -38,6 +38,10 @@ public class main {
 		            }
 		            
 		            Statement stmt = conn.createStatement();    
+		            
+		            String createSql = "CREATE TABLE languages (id int,e varchar (255),g varchar(255),n varchar(255))";
+		            
+		            stmt.executeUpdate(createSql);
 		            
 		            /*String InsertSql = insert(0,"Optionen","options","innstillinger");
 		            
@@ -112,7 +116,7 @@ public class main {
 		            stmt.executeUpdate(InsertSql);*/
 		            
 
-		            ResultSet rs = stmt.executeQuery( "select * from languages ;" );
+		           /* ResultSet rs = stmt.executeQuery( "select * from languages ;" );
 		            
 		            while ( rs.next() ) {
 
@@ -128,9 +132,9 @@ public class main {
 
 		                System.out.println();
 
-		             }
+		             }*/
 
-		             rs.close();
+		            // rs.close();
 		            stmt.close();
 
 		        } catch (SQLException e) {
