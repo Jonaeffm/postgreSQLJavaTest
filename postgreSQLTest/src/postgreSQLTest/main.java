@@ -43,7 +43,7 @@ public class main {
 		            
 		            stmt.executeUpdate(createSql);
 		            
-		            /*String InsertSql = insert(0,"Optionen","options","innstillinger");
+		            String InsertSql = insert(0,"Optionen","options","innstillinger");
 		            
 		            stmt.executeUpdate(InsertSql);
 
@@ -51,7 +51,7 @@ public class main {
 		            
 		            stmt.executeUpdate(InsertSql);
 		            
-		            String	InsertSql = insert(2,"beenden","exit","avslutt");
+		            InsertSql = insert(2,"beenden","exit","avslutt");
 		            
 		            stmt.executeUpdate(InsertSql);
 		            
@@ -113,7 +113,7 @@ public class main {
 		            
 		            InsertSql = insert(17,"Zeitzone","timezone","tidssone");
 		            
-		            stmt.executeUpdate(InsertSql);*/
+		            stmt.executeUpdate(InsertSql);
 		            
 
 		           /* ResultSet rs = stmt.executeQuery( "select * from languages ;" );
