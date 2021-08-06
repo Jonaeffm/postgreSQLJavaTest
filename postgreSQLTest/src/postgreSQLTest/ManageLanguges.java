@@ -28,6 +28,39 @@ public class ManageLanguges {
 		ManageLanguges ML = new ManageLanguges();
 		
 		Integer empID0 = ML.addLanguages("options","Optionen","innstillinger");
+		Integer empID1 = ML.addLanguages("start","Start","start");
+		Integer empID2 = ML.addLanguages("exit","beenden","avslutt");
+		Integer empID3 = ML.addLanguages("alarm off","Alarm aus","alarm av");
+		Integer empID4 = ML.addLanguages("mainmenu","Hauptmenü","hovedmeny");
+		Integer empID5 = ML.addLanguages("option","Wahl","utvalg");
+		Integer empID6 = ML.addLanguages("add alarm clock","Wecker hinzufügen","legg til vekkerklokke");
+		Integer empID7 = ML.addLanguages("remove alarm clock","Wecker entfernen","fjern vekkerklokke");
+		Integer empID8 = ML.addLanguages("directory and filename of mp3","Pfad und Dateiname der Mp3","plassering og filnavn til MP3-filen");
+		Integer empID9 = ML.addLanguages("show alarm clocks","Wecker anzeigen","vis vekkerklokke");
+		Integer empID10 = ML.addLanguages("back","zurück","tilbake");
+		Integer empID11 = ML.addLanguages("today","heute","i dag");
+		Integer empID12 = ML.addLanguages("tomorrow","morgen","i morgen");
+		Integer empID13 = ML.addLanguages("hours","Stunden","timer");
+		Integer empID14 = ML.addLanguages("minutes","Minuten","minutter");
+		Integer empID15 = ML.addLanguages("name","Name","name");
+		Integer empID16 = ML.addLanguages("language","Sprache","Spraak");
+		Integer empID17 = ML.addLanguages("timezone","Zeitzone","tidssone");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 	
