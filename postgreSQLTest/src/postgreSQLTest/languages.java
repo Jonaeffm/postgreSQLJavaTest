@@ -5,6 +5,14 @@ public class languages {
 	private String e;
 	private String g;
 	private String n;
+	
+	public languages(String e, String g, String n)
+	{
+		this.e = e;
+		this.g = g;
+		this.n = n;
+	}
+	
 	public int getId() {
 		return id;
 	}
