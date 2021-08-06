@@ -14,11 +14,21 @@ import java.util.Iterator;
 
 
 public class ManageLanguges {
-	private static SessionFactory factory;
+	private static SessionFactory factory ;
 	public void manage()
 	{
 		try {
+			/*Configuration cfg=new Configuration();  //create Configuration object first
+
+			cfg.configure("hibernate.cfg.xml");//populates the data of the configuration file  
+			factory=cfg.buildSessionFactory(); //then u can create session factory object and u can begin your transaction
+			*/
 			factory = new Configuration().configure().buildSessionFactory();
+			/* factory = new AnnotationConfiguration()
+                     .addPackage("postgreSQLTest")
+                     .addAnnotatedClass(languages.class)
+                     .configure("hibernate.cfg.xml")
+                     .buildSessionFactory();*/
 		}catch (Throwable ex)
 		{
 			System.err.println("Failed to create sessionFactory object"+ex);
