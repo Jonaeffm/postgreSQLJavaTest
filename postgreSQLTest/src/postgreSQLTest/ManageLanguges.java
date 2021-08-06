@@ -27,7 +27,8 @@ public class ManageLanguges {
 		
 		ManageLanguges ML = new ManageLanguges();
 		
-		//Integer empID0 = ML.addLanguages
+		Integer empID0 = ML.addLanguages("options","Optionen","innstillinger");
+		
 	}
 	
 	public Integer addLanguages(String e,String g,String n)
@@ -40,12 +41,18 @@ public class ManageLanguges {
 		{
 			tx = session.beginTransaction();
 			languages lang = new languages(e,g,n);
+			languagesID = (Integer) session.save(lang);
+			tx.commit();
 			
 		}
 		catch (HibernateException exc) {
-			
+			if(tx!=null) tx.rollback();
+			exc.printStackTrace();
 		}
-		return null;
+		finally {
+			session.close();
+		}
+		return languagesID;
 		
 	}
 }
