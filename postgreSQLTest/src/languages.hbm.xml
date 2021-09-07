@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name = "languages" table = "languages">
+	<class name = "postgreSQLTest.languages" table = "languages">
 		<meta attribute = "class-description">
 			This class contains the languages detail.
 		</meta>
