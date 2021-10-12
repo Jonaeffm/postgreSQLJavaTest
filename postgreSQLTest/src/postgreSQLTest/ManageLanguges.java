@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
+import javax.naming.Referenceable;
 import java.util.Iterator;
 
 
@@ -17,25 +17,15 @@ public class ManageLanguges {
 	private static SessionFactory factory ;
 	public void manage()
 	{
+		
 		try {
-			/*Configuration cfg=new Configuration();  //create Configuration object first
-
-			cfg.configure("hibernate.cfg.xml");//populates the data of the configuration file  
-			factory=cfg.buildSessionFactory(); //then u can create session factory object and u can begin your transaction
-			*/
-			//factory = new Configuration().configure().buildSessionFactory();
+		
 			
 			Configuration cfg=new Configuration();  //create Configuration object first
 
 			cfg.configure("hibernate.cfg.xml");//populates the data of the configuration file  
 			factory=cfg.buildSessionFactory(); //then u can create session factory object and u can begin your transaction
 
-			
-			/* factory = new AnnotationConfiguration()
-                     .addPackage("postgreSQLTest")
-                     .addAnnotatedClass(languages.class)
-                     .configure("hibernate.cfg.xml")
-                     .buildSessionFactory();*/
 		}catch (Throwable ex)
 		{
 			System.err.println("Failed to create sessionFactory object"+ex);
@@ -44,7 +34,7 @@ public class ManageLanguges {
 		
 		ManageLanguges ML = new ManageLanguges();
 		
-		Integer empID0 = ML.addLanguages("options","Optionen","innstillinger");
+		
 		Integer empID1 = ML.addLanguages("start","Start","start");
 		Integer empID2 = ML.addLanguages("exit","beenden","avslutt");
 		Integer empID3 = ML.addLanguages("alarm off","Alarm aus","alarm av");
@@ -62,7 +52,7 @@ public class ManageLanguges {
 		Integer empID15 = ML.addLanguages("name","Name","name");
 		Integer empID16 = ML.addLanguages("language","Sprache","Spraak");
 		Integer empID17 = ML.addLanguages("timezone","Zeitzone","tidssone");
-		
+		Integer empID18 = ML.addLanguages("options","Optionen","innstillinger");
 		
 		
 		
